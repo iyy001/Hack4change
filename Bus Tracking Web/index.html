@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tracking System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        input{
+            background-color: transparent;
+        }
+        input::placeholder
+        {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+       <h1 style="color: #fff;font-weight:800">Bus Tracking System</h1>
+    <section id="home">        
+        <div id="alerts"></div>
+    </section>
+    <section id="registration">
+        <form id="registrationForm" action="./bus app/form_validation.html"></form>          
+        </form>
+    </section>
+    <div class="container" style="padding-top: 30px;">
+        <form>
+                <h2 style="margin-bottom: 30px;font-weight:800;color:#fff">Passenger/Driver Registration</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control"  required  id="name" placeholder="Enter your name"  style="width: 250px;margin-left:10%;background:transparent;outline:none;border:none;border-bottom :2px solid black;border-radius:0;">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>   
+
+                <input type="email" class="form-control" required id="email" placeholder="Enter your email"  style="width: 250px;margin-left:10%;background:transparent;outline:none;border:none;border-bottom :2px solid black;border-radius:0;">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>   
+
+                <input type="number" class="form-control" required id="email" placeholder="Enter your password"  style="width: 250px;margin-left:10%;background:transparent;outline:none;border:none;border-bottom :2px solid black;border-radius:0;">
+            </div>
+
+            <a href="./bus app/form_validation.html" class="btn btn-primary" style="background-color:#fff ;font-size:20px;margin-left:30%;font-weight:500;color:black">Submit</a>
+        </form>
+    </div>
+    <section id="schedule" style="background-color:transparent;">
+        <h1 style="color: #fff;font-weight:800;margin-bottom:50px">Bus Schedule</h1>
+        <div id="map" ></div>
+        <div id="busTimings"></div>
+    </section>
+    <footer>
+
+    </footer>        
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
